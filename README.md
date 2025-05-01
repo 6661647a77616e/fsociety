@@ -24,13 +24,13 @@ A Modular Penetration Testing Framework
 ## Install
 
 ```bash
-pip install fsociety
+uv pip install fsociety
 ```
 
 ## Update
 
 ```bash
-pip install --upgrade fsociety
+uv pip install --upgrade fsociety
 ```
 
 ## Usage

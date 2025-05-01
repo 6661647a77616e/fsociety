@@ -146,13 +146,13 @@ class GitHubRepo(metaclass=ABCMeta):
                     if isinstance(packages, list):
                         message = "Do you want to install these packages?"
                         packages_str = " ".join(packages)
-                        command = f"pip install {packages_str}"
+                        command = f"uv pip install {packages_str}"
                     elif isinstance(packages, str):
                         requirements_txt = os.path.join(
                             self.full_path, "requirements.txt"
                         )
                         message = f"Do you want to install these packages from {requirements_txt}?"
-                        command = f"pip install -r {requirements_txt}"
+                        command = f"uv pip install -r {requirements_txt}"
 
                     if packages:
                         print_pip_deps(packages)
